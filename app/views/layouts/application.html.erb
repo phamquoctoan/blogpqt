@@ -9,8 +9,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header id="main_navigation" class="clearfix">
+    <%= link_to "Pham Quoc Toan", root_path, class: "name" %>
+    <nav>
+    <%= link_to "Articles", posts_path %>
+    </nav>
+  </header>
+  <%= yield %>
 
-<%= yield %>
-
+  <footer id="main_footer">
+    <p class="copyright">&copy;2016 Pham Quoc Toan</p>
+    <nav>
+      <a href="http://facebook.com/phamquoctoan" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="http://github.com/phamquoctoan" target="_blank"><i class="fa fa-github"></i></a>
+    </nav>
+  </footer>
 </body>
 </html>
